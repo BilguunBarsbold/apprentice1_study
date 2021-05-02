@@ -13,11 +13,6 @@
         <div class='row'>
             <div class='col-12'>
                 <h2>Welcome</h2>
-                <h3>
-                    <?php
-                        print_r($_POST);
-                    ?>
-                </h3>
                 <form class='register home_page' id='register' action='form_data.php' method='POST'>
                     <div class='name_in'>
                         <label for="exampleInputUsername">username</label>
