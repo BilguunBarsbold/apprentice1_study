@@ -54,6 +54,11 @@
 
                     <hr>
 
+                    <label for="customrange" class='form-label'>Example Range</label>
+                    <input type="range" name='range' class='form-range' min='0' max='10'>
+
+                    <hr>
+
                     <input type='submit'>
 
                     <hr>
