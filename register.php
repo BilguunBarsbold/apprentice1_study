@@ -4,15 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <a href="calculator.php">Calculator</a>
-    <hr>
-    <a href="data.php">data</a>
-    <hr>
-    <a href="buttons.php">Buttons</a>
-    <hr>
-    <a href="index.php">User add</a>
-    <title>Document</title>
+    <title>Registration</title>
 </head>
 <body>
+    
 </body>
 </html>
