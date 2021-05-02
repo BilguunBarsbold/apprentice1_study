@@ -12,6 +12,7 @@
                 <div class='col-12'>
                     <h1>Welcome</h1>
                     <?php include 'navbar.php'; ?>
+                    
                     <form action='/register.php' method='POST'>
                         <div class="name">
                             <label for="exampleInputName">Enter your name</label>
