@@ -12,27 +12,27 @@
                 <div class='col-12'>
                     <h1>Welcome</h1>
                     <?php include 'navbar.php'; ?>
-                    
+
                     <form action='/register.php' method='POST'>
                         <div class="name">
                             <label for="exampleInputName">Enter your name</label>
-                            <input type="text" name='name' required id="exampleInputUsername">
+                            <input type="text" name='name' required class="form-control" id="exampleInputUsername">
                         </div>
                         <div class="username">
                             <label for="exampleInputUsername">Username</label>
-                            <input type="text" name='username' required id="exampleInputUsername">
+                            <input type="text" name='username' required class="form-control" id="exampleInputUsername">
                         </div>
                         <div class="email">
                             <label for="exampleInputEmail1">Email address</label>
-                            <input type="email" name='email' required id="exampleInputEmail1">
+                            <input type="email" name="email" required class="form-control" id="exampleInputEmail1">
                         </div>
                         <div class="password">
                             <label for="exampleInputPassword1">Password</label>
-                            <input type="password" name='password' required id="exampleInputPassword1">
+                            <input type="password" name='password' required class="form-control" id="exampleInputPassword1">
                         </div>
                         <div class="conf_password">
                             <label for="exampleInputPassword1">Confirm password</label>
-                            <input type="password" name='conf_password' required id="exampleInputPassword1">
+                            <input type="password" name='conf_password' required class="form-control" id="exampleInputPassword1">
                         </div>
                         <div class="button form-check">
                             <input type="checkbox" required class="form-check-input" id="exampleCheck1">
