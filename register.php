@@ -12,6 +12,7 @@
                 <div class='col-12'>
                     <?php include 'registration.php'; ?>
                     <?php include 'navbar.php'; ?>
+                    <?php print_r($_POST)?>
                     <form action='/register.php' method='POST'>
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Enter your name</label>
