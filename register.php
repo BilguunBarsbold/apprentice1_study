@@ -35,7 +35,7 @@
                         </div>
                         <div class="mb-3 form-check">
                             <input type="checkbox" required class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Terms and </label>
+                            <label class="form-check-label" for="exampleCheck1">Terms and Policy</label>
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>

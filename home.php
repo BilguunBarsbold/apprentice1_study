@@ -36,7 +36,7 @@
                         </div>
                         <div class="button form-check">
                             <input type="checkbox" required class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Terms and </label>
+                            <label class="form-check-label" for="exampleCheck1">Terms and Policy</label>
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
@@ -46,6 +46,6 @@
 
 
 
-       
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     </body>
 </html>
