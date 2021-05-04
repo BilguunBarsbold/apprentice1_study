@@ -1,36 +1,56 @@
+
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "bilguun0207";
-$dbname = "sutdy";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
-
-    $sql = "SELECT * FROM `users`";
-    $result = $conn->query($sql);
-
-    if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-        print_r($row);
-        echo '<hr>';
-        //echo "id: " . $row["id"].'<br>'. "Username: " . $row["username"]. '<br>'. "email " . $row["email"]. "<hr>";
+    function notempty($field){
+        if($field != ''){
+            return true;
+        }
+        return false;
     }
-    } else {
-    echo "0 results";
-    }
-    $conn->close();
 
+    if(isset($_POST['email'])) {
+        foreach($_POST as $index => $data) {
+            if(notempty($data) == false) {
+                die($data . ' medeelel hooson bna');
+            }
+        }
+        if($_POST['password'] != $_POST['conf_password']){
+            header ('Location: /register.php?error=confirmation');
+        }
+        
+        $username=$_POST['username'];
+        $email=$_POST['email'];
 
-    /*INSERT INTO `users` 
-        (`username`, `email`, `name`, `password`)
+        include 'includes/database.php';
+            //die('Ready to connect');
+        }else{
+            header('Location: /register.php');
+        }
+
+//end
+/*    INSERT INTO `users` 
+    (`username`, `email`, `name`, `password`, `created_at`, `updated_at`, `email_verified`) 
     VALUES 
-        ('bek', 'e@gmailcom','bilguun', 'bilguun0207');
-    */
+    ('username', 'email@example.com', 'name', 'password', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, '0');
+*/    
+
+
+
+
+/*        //Hihceel deer 0-5 hurtel user nemsen
+    for($x=0; $x<5; $x++){
+        $sql = "INSERT INTO `users` (`username`, `email`, `name`, `password`) VALUES ('username$x', 'email$x@gamil.com', 'name$x', 'password$x');";
+        echo $x;
+
+        $hariu = $conn->query($sql);
+        if ($hariu === TRUE){
+            echo ' New account created succesfully' . '<hr>' ;
+        }else{
+            echo 'Error: ' . $sql . '<hr>' . $conn -> query($sql);
+            die();
+        }
+    }
+*/
 ?>
+
+
+

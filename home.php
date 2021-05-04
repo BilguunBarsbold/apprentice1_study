@@ -2,7 +2,7 @@
     <h1>Welcome</h1>
     <?php include 'includes/navbar.php'; ?>
 
-    <form action='/register.php' method='POST'>
+    <form action='registration.php' method='POST'>
         <div class="name">
             <label for="exampleInputName">Enter your name</label>
             <input type="text" name='name' required class="form-control" id="exampleInputUsername">
