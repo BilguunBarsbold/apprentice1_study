@@ -6,7 +6,7 @@
             if($_GET['error'] == 'confirmation'){
         ?>
             <div class="alert alert-danger" role="alert">
-                Password not confirmation alert!
+                Password Confirmation Alert!
             </div>
         <?php
             }

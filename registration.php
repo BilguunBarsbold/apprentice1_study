@@ -20,7 +20,7 @@
         $username=$_POST['username'];
         $email=$_POST['email'];
 
-        include 'includes/database.php';
+        include 'includes/logincheck.php';
             //die('Ready to connect');
         }else{
             header('Location: /register.php');
