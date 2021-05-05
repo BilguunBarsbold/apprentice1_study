@@ -19,10 +19,39 @@
         $name=$_POST['name'];
         $username=$_POST['username'];
         $email=$_POST['email'];
-        $password=$_POST['password'];
+        $password=password_hash($_POST['password'], PASSWORD_DEFAULT);
 
         include 'includes/logincheck.php';
             //die('Ready to connect');
+            $sql="SELECT * FROM `users` WHERE `email`='$email';";
+            $result = $conn -> query($sql);
+            if($result -> num_rows > 0){
+                header('Location: /register.php?error=email');
+                //while($row=$result->fetch_assoc()){
+                    //print_r($row);
+            }
+        
+            $sql="SELECT * FROM `users` WHERE `username`='$username';";
+            $select_result = $conn -> query($sql);
+        
+            if($select_result -> num_rows > 0){
+                header('Location: /register.php?error=username');
+            }
+            
+            $insertsql="INSERT INTO `users` (`name`, `username`, `email`, `password`) VALUE ('$name', '$username', '$email', '$password');";
+            print_r($insertsql);
+            die();
+            
+            $insert_result=$conn->query($insertsql);
+        
+            if($insert_result == TRUE){
+                //login user
+                header('Location: /login.php');
+            }
+            else{
+                header('Location: /register.php?error=unknown');
+            }
+            $conn -> close();
         }else{
             header('Location: /register.php');
         }
