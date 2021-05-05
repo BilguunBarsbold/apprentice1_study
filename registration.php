@@ -1,4 +1,3 @@
-
 <?php
     function notempty($field){
         if($field != ''){
@@ -17,8 +16,10 @@
             header ('Location: /register.php?error=confirmation');
         }
         
+        $name=$_POST['name'];
         $username=$_POST['username'];
         $email=$_POST['email'];
+        $password=$_POST['password'];
 
         include 'includes/logincheck.php';
             //die('Ready to connect');
